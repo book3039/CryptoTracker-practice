@@ -13,12 +13,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.components.CoinListItem
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.preview.previewCoin
 import com.plcoding.cryptotracker.ui.theme.CryptoTrackerTheme
 import com.plcoding.cryptotracker.ui.theme.Dimens
+import kotlinx.coroutines.flow.emptyFlow
 
 @Composable
 fun CoinListScreen(
@@ -61,7 +61,7 @@ private fun CoinListScreenPreview() {
                 coins = (1..10).map {
                     previewCoin.copy(id = it.toString())
                 }
-            )
+            ),
         )
     }
 }
