@@ -1,7 +1,7 @@
 package com.plcoding.cryptotracker.di
 
 import com.plcoding.cryptotracker.crypto.core.data.networking.HttpClientFactory
-import com.plcoding.cryptotracker.crypto.core.domain.CoinDataSource
+import com.plcoding.cryptotracker.crypto.domain.CoinDataSource
 import com.plcoding.cryptotracker.crypto.data.networking.RemoteCoinDataSource
 import com.plcoding.cryptotracker.crypto.presentation.coin_list.CoinListViewModel
 import io.ktor.client.engine.cio.CIO
