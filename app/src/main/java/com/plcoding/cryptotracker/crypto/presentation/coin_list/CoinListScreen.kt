@@ -24,6 +24,7 @@ import kotlinx.coroutines.flow.emptyFlow
 fun CoinListScreen(
     modifier: Modifier = Modifier,
     state: CoinListState,
+    onAction: (CoinListAction) -> Unit,
 ) {
     if (state.isLoading) {
         Box(
@@ -35,15 +36,15 @@ fun CoinListScreen(
         }
     } else {
         LazyColumn(
-             modifier = modifier
-                 .fillMaxSize(),
+            modifier = modifier
+                .fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(Dimens.paddingSmall)
         ) {
             items(state.coins) { coinUI ->
                 CoinListItem(
                     modifier = modifier.fillMaxWidth(),
                     coinUI = coinUI,
-                    onClick = {  }
+                    onClick = { onAction(CoinListAction.OnCoinClick(coinUI)) }
                 )
                 HorizontalDivider()
             }
@@ -62,6 +63,7 @@ private fun CoinListScreenPreview() {
                     previewCoin.copy(id = it.toString())
                 }
             ),
+            onAction = {}
         )
     }
 }

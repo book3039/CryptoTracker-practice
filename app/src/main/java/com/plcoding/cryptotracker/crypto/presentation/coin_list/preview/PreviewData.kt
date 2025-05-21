@@ -10,5 +10,5 @@ internal val previewCoin = Coin(
     symbol = "BTC",
     marketCapUsd = 1241273958896.75,
     priceUsd = 62858.15,
-    changePercent24Hr = -0.1
+    changePercent24Hr = 0.1
 ).toCoinUi()

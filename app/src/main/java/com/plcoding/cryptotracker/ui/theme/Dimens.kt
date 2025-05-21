@@ -8,6 +8,8 @@ object Dimens {
     val paddingMedium = 16.dp
     val paddingLarge = 24.dp
 
-    val coinIconSize = 85.dp
+    val coinListIconSize = 85.dp
+    val coinDetailIconSize = 100.dp
+    val cardIconSize = 75.dp
     val percentArrowSize = 20.dp
 }

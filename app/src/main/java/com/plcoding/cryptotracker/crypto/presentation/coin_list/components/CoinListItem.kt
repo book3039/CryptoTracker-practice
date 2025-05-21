@@ -44,7 +44,7 @@ fun CoinListItem(
         horizontalArrangement = Arrangement.spacedBy(Dimens.paddingMedium)
     ) {
         Icon(
-            modifier = Modifier.size(Dimens.coinIconSize),
+            modifier = Modifier.size(Dimens.coinListIconSize),
             imageVector = ImageVector.vectorResource(id = coinUI.iconRes),
             contentDescription = coinUI.name,
             tint = MaterialTheme.colorScheme.primary
